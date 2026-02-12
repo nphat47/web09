@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เอกสารประกอบการเรียน - การออกแบบและเทคโนโลยี ม.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .resource-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .chapter-number {
+            background: var(--vibrant-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .chapter-title {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .resource-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .resource-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .resource-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .video-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .video-item {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
+        .video-item iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .resource-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Decorative Shapes specific to cards */
+        .card-shape {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- CSS Art Mascot -->
+    <div class="mascot-container">
+        <div class="robot-antenna"></div>
+        <div class="robot-body">
+            <div class="robot-face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-section" style="height: 40vh; min-height: 300px;">
+        <div class="hero-content">
+            <div class="glass-card">
+                <h1 class="hero-title">เอกสารประกอบการเรียน</h1>
+                <p class="hero-subtitle">รวบรวมสื่อวิดีโอและรูปภาพประกอบการสอน</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 40px 20px;">
+
+        <!-- Chapter 1 -->
+        <div class="resource-card">
+            <!-- Decorative Shape -->
+            <div class="soft-shape shape-sphere"
+                style="width: 100px; height: 100px; top: -20px; right: -20px; filter: blur(20px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 1</span>
+                <h2 class="chapter-title">เทคโนโลยีรอบตัว</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/1.png" alt="รูปประกอบบทที่ 1">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 1.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (บทที่ 1)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 1.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 1
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/XBEaEENiHSs"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/LDL9GKJnymM"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="resource-card">
+            <div class="soft-shape shape-cube"
+                style="width: 80px; height: 80px; bottom: -20px; left: -20px; filter: blur(15px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 2</span>
+                <h2 class="chapter-title">การเปลี่ยนแปลงของเทคโนโลยี</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/2.png" alt="รูปประกอบบทที่ 2">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 2.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (บทที่ 2)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 2.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 2
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/ykaRwa1KtHo"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/hvhlK7ZG234"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="resource-card">
+            <div class="soft-shape shape-torus"
+                style="width: 120px; height: 120px; top: 10px; right: 10%; filter: blur(25px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 3</span>
+                <h2 class="chapter-title">ระบบทางเทคโนโลยี</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/3.png" alt="รูปประกอบบทที่ 3">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 3.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (บทที่ 3)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 3.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 3
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/pMPfM9EWmX8"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/OYdWnSrU_fk"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="resource-card">
+            <div class="soft-shape shape-pyramid"
+                style="width: 90px; height: 90px; bottom: 10px; right: -10px; filter: blur(10px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 4</span>
+                <h2 class="chapter-title">วัสดุและเครื่องมือช่างพื้นฐาน</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/4.png" alt="รูปประกอบบทที่ 4">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 4.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (บทที่ 4)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 4.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 4
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/3jARNoRffHo"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/6u3Xlfh7MVk"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="resource-card">
+            <div class="soft-shape shape-sphere"
+                style="width: 150px; height: 150px; top: -50px; left: 20%; filter: blur(30px); opacity: 0.4;"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 5</span>
+                <h2 class="chapter-title">กลไก ไฟฟ้า และอิเล็กทรอนิกส์</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/5.png" alt="รูปประกอบบทที่ 5">
+                    <!-- Moved 1 video here -->
+                    <div style="margin-top: 20px; display: grid; gap: 15px;">
+                        <div class="video-item"><iframe src="https://www.youtube.com/embed/BMmngzJQHCQ"
+                                allowfullscreen></iframe></div>
+                    </div>
+                    <!-- PDF Button moved here -->
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 5.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (หน่วยที่ 5)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 5.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 5
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/XnYyq4adtbw"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/5wOQ1HJFFVs"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/emXdn_9auoM"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="resource-card">
+            <div class="soft-shape shape-cube"
+                style="width: 100px; height: 100px; top: 10px; right: 0; filter: blur(20px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 6</span>
+                <h2 class="chapter-title">กระบวนการออกแบบเชิงวิศวกรรม</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/6.png" alt="รูปประกอบบทที่ 6">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 6.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; margin-bottom: 10px;">
+                            <span>📄</span> ดาวน์โหลด PDF (บทที่ 6)
+                        </a>
+                        <br>
+                        <a href="images/ใบงานที่ 6.pdf" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent-teal); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📝</span> ดาวน์โหลดใบงานที่ 6
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/KgAVkGaQc-o"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chapter 7 (No Image requested, only videos) -->
+        <div class="resource-card">
+            <div class="soft-shape shape-torus"
+                style="width: 110px; height: 110px; bottom: -20px; left: -20px; filter: blur(15px);"></div>
+
+            <div class="chapter-header">
+                <span class="chapter-number">บทที่ 7</span>
+                <h2 class="chapter-title">กรณีศึกษา</h2>
+            </div>
+            <div class="resource-content">
+                <div class="resource-image">
+                    <img src="images/7.png" alt="รูปประกอบบทที่ 7">
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="images/หน่วยที่ 7.pptx" download class="btn"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: var(--vibrant-blue); color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                            <span>📥</span> ดาวน์โหลด PowerPoint (บทที่ 7)
+                        </a>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/pj2IHYa2o4A"
+                            allowfullscreen></iframe></div>
+                    <div class="video-item"><iframe src="https://www.youtube.com/embed/8kRmIELpZK8"
+                            allowfullscreen></iframe></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 วิชาการออกแบบและเทคโนโลยี ม.1</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

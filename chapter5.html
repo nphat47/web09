@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 5 กลไก ไฟฟ้า และอิเล็กทรอนิกส์ - การออกแบบและเทคโนโลยี ม.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .content-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .content-box h2 {
+            color: var(--vibrant-blue);
+            margin-bottom: 20px;
+        }
+
+        .content-box h3 {
+            color: var(--accent-teal);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .content-box p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+
+        .content-box ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .mech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .mech-item {
+            background: #F0F4F8;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .ref-link {
+            display: block;
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.9em;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="mascot-container">
+        <div class="robot-antenna"></div>
+        <div class="robot-body">
+            <div class="robot-face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-section" style="height: 40vh; min-height: 300px; position: relative; overflow: hidden;">
+        <div class="global-cover-background"></div>
+
+        <!-- Floating Tech Circles -->
+        <div class="tech-circle tc1"></div>
+        <div class="tech-circle tc2"></div>
+        <div class="tech-circle tc3"></div>
+
+        <div class="hero-content">
+            <div class="glass-card">
+                <h1 class="hero-title">บทที่ 5</h1>
+                <p class="hero-subtitle">กลไก ไฟฟ้า และอิเล็กทรอนิกส์เบื้องต้น</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 60px 20px;">
+        <div class="content-box">
+            <h2>1. กลไก (Mechanisms)</h2>
+            <p>ส่วนที่ทำหน้าที่ส่งผ่านการเคลื่อนที่จากต้นกำเนิดพลังงานไปยังส่วนอื่นๆ ของเครื่องจักร
+                เพื่อให้ทำงานตามที่ต้องการ กลไกพื้นฐานที่ควรรู้จัก ได้แก่:</p>
+
+            <div class="mech-grid">
+                <div class="mech-item">
+                    <h3>ล้อและเพลา (Wheel and Axle)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">ช่วยผ่อนแรงในการหมุนหรือเคลื่อนย้ายวัตถุ เช่น
+                        ลูกบิดประตู, พวงมาลัยรถยนต์</p>
+                </div>
+                <div class="mech-item">
+                    <h3>เฟือง (Gears)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">อุปกรณ์ที่มีฟันรอบขอบ
+                        ใช้ส่งกำลังและเปลี่ยนความเร็ว/ทิศทาง เช่น เฟืองจักรยาน, เฟืองนาฬิกา</p>
+                </div>
+                <div class="mech-item">
+                    <h3>รอก (Pulley)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">ล้อที่มีร่องสำหรับคล้องเชือก ช่วยผ่อนแรงในการยกของหนัก
+                        เช่น รอกตักน้ำ, รอกก่อสร้าง</p>
+                </div>
+                <div class="mech-item">
+                    <h3>คาน (Lever)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">แท่งวัตถุแข็งที่หมุนรอบจุดหมุน ช่วยผ่อนแรง เช่น กรรไกร,
+                        คีมตัดลวด, ชะแลง</p>
+                </div>
+            </div>
+
+            <h2>2. ไฟฟ้า (Electricity)</h2>
+            <p>พลังงานรูปแบบหนึ่งซึ่งเกี่ยวข้องกับการเคลื่อนที่ของอิเล็กตรอน นำมาใช้เปลี่ยนเป็นพลังงานอื่นๆ เช่น
+                แสงสว่าง (หลอดไฟ), ความร้อน (เตารีด), กล (พัดลม)</p>
+            <h3>ชนิดของไฟฟ้า</h3>
+            <ul>
+                <li><strong>ไฟฟ้ากระแสตรง (Direct Current: DC):</strong> กระแสไฟฟ้าไหลไปทิศทางเดียว เช่น แบตเตอรี่,
+                    ถ่านไฟฉาย, โซลาร์เซลล์</li>
+                <li><strong>ไฟฟ้ากระแสสลับ (Alternating Current: AC):</strong> กระแสไฟฟ้าไหลกลับไปกลับมา เช่น ไฟบ้าน
+                    (ที่ใช้ตามอาคารบ้านเรือน)</li>
+            </ul>
+
+            <h2>3. อิเล็กทรอนิกส์ (Electronics)</h2>
+            <p>อุปกรณ์ที่ควบคุมการไหลของกระแสไฟฟ้าในวงจรไฟฟ้า เพื่อให้กระแสไฟฟ้าเปลี่ยนแปลงไปเป็นสัญญาณต่างๆ
+                หรือควบคุมการทำงาน</p>
+            <ul>
+                <li><strong>ตัวต้านทาน (Resistor):</strong> จำกัดปริมาณกระแสไฟฟ้าในวงจร</li>
+                <li><strong>ไดโอด (Diode):</strong> ยอมให้กระแสไฟฟ้าไหลทางเดียว (เช่น ไดโอดเปล่งแสง LED)</li>
+                <li><strong>คาปาซิเตอร์ (Capacitor):</strong> เก็บประจุไฟฟ้าชั่วคราว</li>
+            </ul>
+
+            <!-- Video Section 1: Mechanisms -->
+            <div class="video-section">
+                <h3>สื่อการเรียนรู้: กลไก (Mechanisms)</h3>
+                <div class="video-wrapper" data-videos='["XnYyq4adtbw", "5wOQ1HJFFVs"]'>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/XnYyq4adtbw" allowfullscreen
+                            style="transition: opacity 0.3s;"></iframe>
+                    </div>
+                    <div class="video-controls">
+                        <button class="video-btn btn-next-video">
+                            วิดีโอถัดไป ⏭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section 2: Electricity -->
+            <div class="video-section" style="margin-top: 20px;">
+                <h3>สื่อการเรียนรู้: ไฟฟ้าและอิเล็กทรอนิกส์เบื้องต้น</h3>
+                <div class="video-wrapper" data-videos='["BMmngzJQHCQ", "emXdn_9auoM"]'>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/BMmngzJQHCQ" allowfullscreen
+                            style="transition: opacity 0.3s;"></iframe>
+                    </div>
+                    <div class="video-controls">
+                        <button class="video-btn btn-next-video">
+                            วิดีโอถัดไป ⏭
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box" style="background: #F0F4F8;">
+            <h3>อ้างอิงและแหล่งข้อมูล</h3>
+            <a href="https://youtu.be/XnYyq4adtbw" class="ref-link" target="_blank">1. YouTube: กลไก (Clip 1)</a>
+            <a href="https://youtu.be/5wOQ1HJFFVs" class="ref-link" target="_blank">2. YouTube: กลไก (Clip 2)</a>
+            <a href="https://youtu.be/BMmngzJQHCQ" class="ref-link" target="_blank">3. YouTube: ไฟฟ้าอิเล็กทรอนิกส์
+                (Clip 1)</a>
+            <a href="https://youtu.be/emXdn_9auoM" class="ref-link" target="_blank">4. YouTube: ไฟฟ้าอิเล็กทรอนิกส์
+                (Clip 2)</a>
+            <a href="https://sites.google.com/pbn2.go.th/classroomkrurapee/classroom/%E0%B8%AB%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%A2%E0%B8%99-%E0%B8%A1-1/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-%E0%B8%A1-1/%E0%B8%9A%E0%B8%97%E0%B8%97-5-%E0%B8%81%E0%B8%A5%E0%B9%84%E0%B8%81-%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B9%80%E0%B8%A5%E0%B8%81%E0%B8%97%E0%B8%A3%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%AA%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%99"
+                class="ref-link" target="_blank">5. ห้องเรียนออนไลน์ครูต๋อม - บทที่ 5 กลไก ไฟฟ้าฯ</a>
+            <a href="https://myipst.ipst.ac.th/baskets/design-technology-m1" class="ref-link" target="_blank">6.
+                หนังสือเรียน สสวท. (IPST)</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="chapter4.html" class="btn">
+                < บทก่อนหน้า</a>
+                    <a href="lessons.html" class="btn">กลับหน้ารวม</a>
+                    <a href="chapter6.html" class="btn">บทถัดไป ></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 วิชาการออกแบบและเทคโนโลยี ม.1</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 3 ระบบทางเทคโนโลยี - การออกแบบและเทคโนโลยี ม.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        .content-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .content-box h2 {
+            color: var(--vibrant-blue);
+            margin-bottom: 20px;
+        }
+
+        .content-box h3 {
+            color: var(--accent-teal);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .content-box p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+
+        .content-box ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .system-diagram {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .sys-box {
+            background: #EBF8FF;
+            border: 2px solid #AECBEB;
+            border-radius: 10px;
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .sys-arrow {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            color: #4A90E2;
+        }
+
+        .ref-link {
+            display: block;
+            margin-top: 10px;
+            color: var(--text-light);
+            font-size: 0.9em;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="mascot-container">
+        <div class="robot-antenna"></div>
+        <div class="robot-body">
+            <div class="robot-face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-section" style="height: 40vh; min-height: 300px; position: relative; overflow: hidden;">
+        <div class="global-cover-background"></div>
+
+        <!-- Floating Tech Circles -->
+        <div class="tech-circle tc1"></div>
+        <div class="tech-circle tc2"></div>
+        <div class="tech-circle tc3"></div>
+
+        <div class="hero-content">
+            <div class="glass-card">
+                <h1 class="hero-title">บทที่ 3</h1>
+                <p class="hero-subtitle">ระบบทางเทคโนโลยี</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 60px 20px;">
+        <div class="content-box">
+            <h2>ความหมายของระบบ</h2>
+            <p><strong>ระบบ (System)</strong> คือ กลุ่มของส่วนต่าง ๆ
+                ตั้งแต่สองส่วนขึ้นไปประกอบเข้าด้วยกันและทำงานร่วมกัน เพื่อให้บรรลุวัตถุประสงค์เดียวกัน ระบบแบ่งออกเป็น:
+            </p>
+            <ul>
+                <li><strong>ระบบที่เกิดขึ้นเองตามธรรมชาติ:</strong> เช่น ระบบย่อยอาหาร, ระบบนิเวศ, ระบบหมุนเวียนเลือด
+                </li>
+                <li><strong>ระบบที่มนุษย์สร้างขึ้น:</strong> เช่น ระบบบำบัดน้ำเสีย, ระบบรถไฟฟ้า,
+                    ระบบการรดน้ำต้นไม้อัตโนมัติ</li>
+            </ul>
+
+            <h2>องค์ประกอบของระบบทางเทคโนโลยี</h2>
+            <p>การทำงานของระบบทางเทคโนโลยีจะประกอบด้วย 4 ส่วนหลัก (System Approach) ดังนี้:</p>
+
+            <div class="system-diagram">
+                <div class="sys-box">
+                    <h3>1. ตัวป้อน (Input)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">สิ่งที่ป้อนเข้าสู่ระบบ</p>
+                </div>
+                <div class="sys-arrow">➜</div>
+                <div class="sys-box">
+                    <h3>2. กระบวนการ (Process)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">การดำเนิการเพื่อให้ได้ผลผลิต</p>
+                </div>
+                <div class="sys-arrow">➜</div>
+                <div class="sys-box">
+                    <h3>3. ผลผลิต (Output)</h3>
+                    <p style="text-indent: 0; font-size: 0.9em;">ผลลัพธ์ที่ได้จากระบบ</p>
+                </div>
+            </div>
+            <div style="text-align: center; color: var(--accent-teal); margin-bottom: 20px;">
+                <strong>4. ข้อมูลย้อนกลับ (Feedback)</strong> (มีเฉพาะบางระบบ เพื่อใช้ควบคุมการทำงาน)
+            </div>
+
+            <h2>🔍 ตัวอย่างการวิเคราะห์: หม้อหุงข้าวไฟฟ้า</h2>
+            <ul>
+                <li><strong>ตัวป้อน (Input):</strong> พลังงานไฟฟ้า, ข้าว, น้ำ</li>
+                <li><strong>กระบวนการ (Process):</strong> การเปลี่ยนพลังงานไฟฟ้าเป็นความร้อนเพื่อทำให้น้ำเดือดและข้าวสุก
+                    (โดยมีเทอร์โมสตัทตัดไฟเมื่อสุก)</li>
+                <li><strong>ผลผลิต (Output):</strong> ข้าวที่หุงสุกพร้อมรับประทาน</li>
+                <li><strong>ข้อมูลย้อนกลับ (Feedback):</strong> ระบบตรวจสอบอุณหภูมิ (เมื่อน้ำแห้ง อุณหภูมิสูงขึ้น
+                    ระบบจะตัดวงจรไปสู่โหมดอุ่น)</li>
+            </ul>
+
+            <!-- Video Section -->
+            <div class="video-section">
+                <h3>สื่อการเรียนรู้ (Video)</h3>
+                <div class="video-wrapper" data-videos='["pMPfM9EWmX8", "OYdWnSrU_fk"]'>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/pMPfM9EWmX8" allowfullscreen
+                            style="transition: opacity 0.3s;"></iframe>
+                    </div>
+                    <div class="video-controls">
+                        <button class="video-btn btn-next-video">
+                            วิดีโอถัดไป ⏭
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box" style="background: #F0F4F8;">
+            <h3>อ้างอิงและแหล่งข้อมูล</h3>
+            <a href="https://youtu.be/pMPfM9EWmX8" class="ref-link" target="_blank">1. YouTube: ระบบทางเทคโนโลยี (Clip
+                1)</a>
+            <a href="https://youtu.be/OYdWnSrU_fk" class="ref-link" target="_blank">2. YouTube: การวิเคราะห์ระบบ (Clip
+                2)</a>
+            <a href="https://sites.google.com/pbn2.go.th/classroomkrurapee/classroom/%E0%B8%AB%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%A2%E0%B8%99-%E0%B8%A1-1/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2-%E0%B8%A1-1/%E0%B8%9A%E0%B8%97%E0%B8%97-3-%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2"
+                class="ref-link" target="_blank">3. ห้องเรียนออนไลน์ครูต๋อม - บทที่ 3 ระบบทางเทคโนโลยี</a>
+            <a href="https://myipst.ipst.ac.th/baskets/design-technology-m1" class="ref-link" target="_blank">4.
+                หนังสือเรียน สสวท. (IPST)</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="chapter2.html" class="btn">
+                < บทก่อนหน้า</a>
+                    <a href="lessons.html" class="btn">กลับหน้ารวม</a>
+                    <a href="chapter4.html" class="btn">บทถัดไป ></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 วิชาการออกแบบและเทคโนโลยี ม.1</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

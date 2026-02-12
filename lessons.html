@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทเรียน - การออกแบบและเทคโนโลยี ม.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Prompt:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- CSS Art Mascot (Fixed Position) -->
+    <div class="mascot-container" title="คลิกเพื่อทักทาย!">
+        <div class="robot-antenna"></div>
+        <div class="robot-body">
+            <div class="robot-face">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Page Header -->
+    <header class="hero-section" style="height: 40vh; min-height: 300px; position: relative; overflow: hidden;">
+        <div class="global-cover-background"></div>
+
+        <!-- Decorative Shapes for Header -->
+        <div class="soft-shape shape-torus"
+            style="width: 140px; height: 140px; top: 15%; left: 8%; filter: blur(30px); opacity: 0.5;"></div>
+        <div class="soft-shape shape-sphere"
+            style="width: 100px; height: 100px; bottom: 20%; right: 12%; filter: blur(25px); opacity: 0.4; background: linear-gradient(135deg, #B2F7EF, #E0FFFF);">
+        </div>
+
+        <div class="hero-content">
+            <div class="glass-card">
+                <h1 class="hero-title">บทเรียน</h1>
+                <p class="hero-subtitle">เลือกบทเรียนที่ต้องการศึกษาได้เลยครับ</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chapters Section -->
+    <section class="chapters-section" style="position: relative;">
+        <!-- Decorative Shapes floating around grid -->
+        <div class="soft-shape shape-cube"
+            style="width: 120px; height: 120px; top: 10%; right: -5%; filter: blur(35px); opacity: 0.3; z-index: -1;">
+        </div>
+        <div class="soft-shape shape-pyramid"
+            style="width: 110px; height: 110px; bottom: 5%; left: -5%; filter: blur(30px); opacity: 0.3; z-index: -1;">
+        </div>
+
+        <div class="container">
+            <div class="chapter-grid">
+                <!-- Chapter 1 -->
+                <article class="chapter-card" onclick="window.location.href='chapter1.html'">
+                    <div class="card-icon">🌍</div>
+                    <h3 class="chapter-title">บทที่ 1</h3>
+                    <p class="chapter-desc">เทคโนโลยีรอบตัว</p>
+                </article>
+
+                <!-- Chapter 2 -->
+                <article class="chapter-card" onclick="window.location.href='chapter2.html'">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="chapter-title">บทที่ 2</h3>
+                    <p class="chapter-desc">การเปลี่ยนแปลงของเทคโนโลยี</p>
+                </article>
+
+                <!-- Chapter 3 -->
+                <article class="chapter-card" onclick="window.location.href='chapter3.html'">
+                    <div class="card-icon">⚙️</div>
+                    <h3 class="chapter-title">บทที่ 3</h3>
+                    <p class="chapter-desc">ระบบทางเทคโนโลยี</p>
+                </article>
+
+                <!-- Chapter 4 -->
+                <article class="chapter-card" onclick="window.location.href='chapter4.html'">
+                    <div class="card-icon">🔨</div>
+                    <h3 class="chapter-title">บทที่ 4</h3>
+                    <p class="chapter-desc">วัสดุและเครื่องมือช่างพื้นฐาน</p>
+                </article>
+
+                <!-- Chapter 5 -->
+                <article class="chapter-card" onclick="window.location.href='chapter5.html'">
+                    <div class="card-icon">💡</div>
+                    <h3 class="chapter-title">บทที่ 5</h3>
+                    <p class="chapter-desc">กลไก ไฟฟ้าและอิเล็กทรอนิกส์เบื้องต้น</p>
+                </article>
+
+                <!-- Chapter 6 -->
+                <article class="chapter-card" onclick="window.location.href='chapter6.html'">
+                    <div class="card-icon">📐</div>
+                    <h3 class="chapter-title">บทที่ 6</h3>
+                    <p class="chapter-desc">กระบวนการออกแบบเชิงวิศวกรรม</p>
+                </article>
+
+                <!-- Chapter 7 -->
+                <article class="chapter-card" onclick="window.location.href='chapter7.html'">
+                    <div class="card-icon">🏗️</div>
+                    <h3 class="chapter-title">บทที่ 7</h3>
+                    <p class="chapter-desc">กรณีศึกษาการทำงาน</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 วิชาการออกแบบและเทคโนโลยี ม.1 | สร้างสรรค์เพื่อการเรียนรู้</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
